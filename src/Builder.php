@@ -11,7 +11,7 @@ class Builder
      *
      * @var array
      */
-    protected $ingredients = ['gluten', 'coffee'];
+    protected $ingredients = [];
 
     /**
      * Start a new cake builder.
@@ -36,7 +36,7 @@ class Builder
 
         $unique = array_unique($ingredients);
 
-        if (count($ingredients) === count($unique)) {
+        if (count($ingredients) !== count($unique)) {
             throw new DuplicateIngredientException();
         }
 
@@ -52,7 +52,7 @@ class Builder
      */
     public function addChocolate()
     {
-        return $this->add('chocolate', 'gluteen');
+        return $this->add('chocolate', 'gluten');
     }
 
     /**
@@ -75,7 +75,7 @@ class Builder
     public function addCoffee($decafe = false)
     {
         if (! $decafe) {
-            return $this->add('caffeine');
+            $this->add('caffeine');
         }
 
         return $this->add('coffee');
