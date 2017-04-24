@@ -62,16 +62,6 @@ class Cake
     }
 
     /**
-     * Check if the cake is gluten free.
-     *
-     * @return boolean
-     */
-    public function hasGluten()
-    {
-        return ! $this->hasIngredient('gluten');
-    }
-
-    /**
      * Check if the cake is caffeine free.
      *
      * @return boolean

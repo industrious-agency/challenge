@@ -11,7 +11,7 @@ class Builder
      *
      * @var array
      */
-    protected $ingredients = ['gluten', 'coffee'];
+    protected $ingredients = [];
 
     /**
      * Start a new cake builder.
@@ -52,7 +52,7 @@ class Builder
      */
     public function addChocolate()
     {
-        return $this->add('chocolate', 'gluteen');
+        return $this->add('chocolate');
     }
 
     /**

@@ -27,7 +27,6 @@ class BuidlderTest extends PHPUnit_Framework_TestCase
 
         $this->assertTrue($cake->isChocolate());
         $this->assertFalse($cake->isVanilla());
-        $this->assertFalse($cake->hasGluten());
     }
 
     public function test_it_can_build_vanilla_cake()
@@ -38,15 +37,6 @@ class BuidlderTest extends PHPUnit_Framework_TestCase
 
         $this->assertTrue($cake->isVanilla());
         $this->assertFalse($cake->isChocolate());
-        $this->assertTrue($cake->hasGluten());
-    }
-
-    public function test_it_can_build_gluten_free_cake()
-    {
-        $cake = Builder::start()
-            ->make();
-
-        $this->assertTrue($cake->hasGluten());
     }
 
     public function test_it_can_build_mocha_cake()
