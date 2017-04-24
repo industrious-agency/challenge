@@ -38,7 +38,7 @@ class Cake
      */
     public function isChocolate()
     {
-        $this->hasIngredient('chocolate');
+        return $this->hasIngredient('chocolate');
     }
 
     /**
@@ -78,7 +78,7 @@ class Cake
      */
     public function hasCaffeine()
     {
-        return $this->hasIngredient('coffee');
+        return $this->hasIngredient('caffeine');
     }
 
     /**
