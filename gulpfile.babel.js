@@ -83,6 +83,7 @@ gulp.task('submit', ['test'], () => {
     sequence(
         'timer:stop',
         'submit:force',
+        'reset',
         'exit',
     );
 });
