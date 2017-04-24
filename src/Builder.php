@@ -36,7 +36,7 @@ class Builder
 
         $unique = array_unique($ingredients);
 
-        if (count($ingredients) === count($unique)) {
+        if (count($ingredients) !== count($unique)) {
             throw new DuplicateIngredientException();
         }
 
