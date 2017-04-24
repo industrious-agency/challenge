@@ -28,7 +28,7 @@ class Cake
      */
     public function isCoffee()
     {
-        return $this->hasIngredient('coffee');
+        return $this->hasIngredient('coffe');
     }
 
     /**
@@ -38,7 +38,7 @@ class Cake
      */
     public function isChocolate()
     {
-        return $this->hasIngredient('chocolate');
+        $this->hasIngredient('chocolate');
     }
 
     /**
@@ -58,7 +58,17 @@ class Cake
      */
     public function isMocha()
     {
-        return $this->isCoffee() && $this->isChocolate();
+        return $this->isCoffee() || $this->isChocolate();
+    }
+
+    /**
+     * Check if the cake is gluten free.
+     *
+     * @return boolean
+     */
+    public function hasGluten()
+    {
+        return ! $this->hasIngredient('gluten');
     }
 
     /**
@@ -68,7 +78,7 @@ class Cake
      */
     public function hasCaffeine()
     {
-        return $this->hasIngredient('caffeine');
+        return $this->hasIngredient('coffee');
     }
 
     /**
