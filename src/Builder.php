@@ -36,7 +36,7 @@ class Builder
 
         $unique = array_unique($ingredients);
 
-        if (count($ingredients) === count($unique)) {
+        if (count($ingredients) !== count($unique)) {
             throw new DuplicateIngredientException();
         }
 
@@ -75,7 +75,7 @@ class Builder
     public function addCoffee($decafe = false)
     {
         if (! $decafe) {
-            return $this->add('caffeine');
+            $this->add('caffeine');
         }
 
         return $this->add('coffee');
