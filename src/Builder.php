@@ -52,7 +52,7 @@ class Builder
      */
     public function addChocolate()
     {
-        return $this->add('chocolate', 'gluteen');
+        return $this->add('chocolate');
     }
 
     /**
